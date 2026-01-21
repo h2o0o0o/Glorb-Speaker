@@ -1,0 +1,125 @@
+{
+    "Author": "Dimak005",
+    "SoundKeys": [
+        {
+            "Letter": "а",
+            "Sound": "а.wav"
+        },
+        {
+            "Letter": "б",
+            "Sound": "б.wav"
+        },
+        {
+            "Letter": "в",
+            "Sound": "в.wav"
+        },
+        {
+            "Letter": "г",
+            "Sound": "г.wav"
+        },
+        {
+            "Letter": "д",
+            "Sound": "д.wav"
+        },
+        {
+            "Letter": "е",
+            "Sound": "е.wav"
+        },
+        {
+            "Letter": "ё",
+            "Sound": "ё.wav"
+        },
+        {
+            "Letter": "ж",
+            "Sound": "ж.wav"
+        },
+        {
+            "Letter": "з",
+            "Sound": "з.wav"
+        },
+        {
+            "Letter": "и",
+            "Sound": "и.wav"
+        },
+        {
+            "Letter": "й",
+            "Sound": "й.wav"
+        },
+        {
+            "Letter": "к",
+            "Sound": "к.wav"
+        },
+        {
+            "Letter": "л",
+            "Sound": "л.wav"
+        },
+        {
+            "Letter": "м",
+            "Sound": "м.wav"
+        },
+        {
+            "Letter": "н",
+            "Sound": "н.wav"
+        },
+        {
+            "Letter": "о",
+            "Sound": "о.wav"
+        },
+        {
+            "Letter": "п",
+            "Sound": "п.wav"
+        },
+        {
+            "Letter": "р",
+            "Sound": "р.wav"
+        },
+        {
+            "Letter": "с",
+            "Sound": "с.wav"
+        },
+        {
+            "Letter": "т",
+            "Sound": "т.wav"
+        },
+        {
+            "Letter": "у",
+            "Sound": "у.wav"
+        },
+        {
+            "Letter": "ф",
+            "Sound": "ф.wav"
+        },
+        {
+            "Letter": "х",
+            "Sound": "х.wav"
+        },
+        {
+            "Letter": "ч",
+            "Sound": "ч.wav"
+        },
+        {
+            "Letter": "ш",
+            "Sound": "ш.wav"
+        },
+        {
+            "Letter": "щ",
+            "Sound": "щ.wav"
+        },
+        {
+            "Letter": "ы",
+            "Sound": "ы.wav"
+        },
+        {
+            "Letter": "э",
+            "Sound": "э.wav"
+        },
+        {
+            "Letter": "ю",
+            "Sound": "ю.wav"
+        },
+        {
+            "Letter": "я",
+            "Sound": "я.wav"
+        }
+    ]
+}
