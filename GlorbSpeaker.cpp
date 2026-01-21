@@ -8,6 +8,7 @@
 using namespace std;
 
 //glorb speaker 0.1
+//jopa
 
 void printGlorb(string filename);
 
