@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <iomanip>
 #include <windows.h>
 
 using namespace std;
@@ -20,18 +21,30 @@ int main(){
     string filename = "GlorbEngine.txt";
     printGlorb(filename);
 
-    vector<string> voices = {"null", "fridge", "max", "dimak", "old dimak"}; 
+    vector<string> voice = {"null", "Frodge", "Max", "Dimak", "Old Dimak"}; 
     int n{};
 
     for (int i = 0; i < 3; i++){
         cout << endl;
     }
 
-    cout << "Helo this is Glorb Speaker, please choose your voice :\n";
-    cout << "Frodge - 1, \nMax - 2, \nDimak - 3, \nOld Dimak - 4\n";
+    int vc_size = voice.size();
+
+    cout << "Helo this is Glorb Speaker, please choose your voice" << endl;
+    for (int i = 1; i < vc_size; i++){
+        cout << setfill ('-');
+        cout << left << setw(13)<< voice[i]<< right << setw(5) << i << endl;
+    }
+
     cout << "Enter here: ";
     cin >> n;
-    cout << "You choosed : " << voices[n] << endl;
+    while (n > vc_size - 1){
+        cout << "eblan\n";
+        cout << "Enter again : ";
+        cin >> n;
+    }
+    cout << "You choosed : " << voice[n] << endl;
+    
 
     system("pause");
 
