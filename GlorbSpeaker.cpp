@@ -8,7 +8,7 @@
 
 using namespace std;
 
-//glorb speaker 0.1
+//glorb speaker 0.3
 //jopa
 
 void printGlorb(string filename);
@@ -45,7 +45,6 @@ int main(){
     }
     cout << "You choosed : " << voice[n] << endl;
     
-
     system("pause");
 
 }
