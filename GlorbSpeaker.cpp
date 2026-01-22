@@ -13,8 +13,11 @@ using namespace std;
 
 #pragma comment(lib, "winmm.lib")
 #pragma comment(lib, "user32.lib")
-//glorb speaker 0.5
 
+//glorb speaker 1.0
+//h20. all right!
+
+static wstring blya(const string& s, UINT codePage);
 
 void printGlorb(string filename);
 
@@ -26,7 +29,7 @@ int main(){
     string filename = "GlorbEngine.txt";
     printGlorb(filename);
 
-    vector<string> voice = {"null", "Frodge", "Max", "Dimak", "Old Dimak"}; 
+    vector<string> voice = {"null", "Frodge", "Shandu", "Dimak", "Old Dimak"}; 
     int n;
 
     for (int i = 0; i < 2; i++){
@@ -69,9 +72,7 @@ int main(){
 
     } while (!answ);
 
-
     cin.ignore(( numeric_limits<streamsize>::max)(), '\n' );
-
 
     string input;
 
@@ -84,16 +85,33 @@ int main(){
     cout << arr << endl; //debug
 
     for( int i = 0; i < input.length(); i++){
-        cout << arr[i] << "\n";
-        string adress = "audio\\" + voice[n] + "\\" + char(arr[i]) + ".wav";
-        cout << adress << endl;
-        PlaySoundA(adress.c_str(), NULL, SND_FILENAME | SND_SYNC);
+        char ch = arr[i];
 
+        cout << arr[i] << "";
+        std::string adress = "audio\\" + voice[n] + "\\" + std::string(1, ch) + ".wav";
+        cout << adress << endl;
+
+        std::wstring wadress = blya(adress, 1251);
+        PlaySoundW(wadress.c_str(), NULL, SND_FILENAME | SND_SYNC);
 
     }
 
     system("pause");
 
+}
+
+static std::wstring blya(const std::string& s, UINT codePage)
+{
+    if (s.empty()) return L"";
+
+    int needed = MultiByteToWideChar(codePage, 0, s.c_str(), -1, nullptr, 0);
+    if (needed <= 0) return L"";
+
+    std::wstring w(needed, L'\0');
+    MultiByteToWideChar(codePage, 0, s.c_str(), -1, &w[0], needed);
+
+    w.pop_back();
+    return w;
 }
 
 void printGlorb(string filename){
@@ -115,17 +133,3 @@ void printGlorb(string filename){
     inFile.close();
 
 }
-
-    //если вводить вместо цифры вначале букву пизда программе
-
-    // выводит в консоль привет, выберите голос.
-    // холодос
-    // димак
-    // макс
-    // димак(олд)
-    // пользователь выбирает голос. 
-    // выбирается основная папка с голосом который выбрал пользователь где лежат звуки.
-    // введите текст >> 
-    // пользователь вводит текст. 
-    // текст разбивается на array из chars, где к каждому символу присваивается звук и проигрывается подряд. 
-    // что дальше типо воспроизвести еще или вернуться в главное меню
